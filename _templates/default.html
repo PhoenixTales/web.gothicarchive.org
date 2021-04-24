@@ -1,4 +1,6 @@
-{% include relBase.html %}
+{% include abs-link-base.html %}
+{% include abs-media-link-base.html %}
+{% include media-link-base.html %}
 <!doctype html>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +23,9 @@
         {% include menu.html %}
 		
 	</div>
-
-    {{ page.content }}
+	{% assign mediaLinkBasePlaceholder = '{{ mediaLinkBase }}' %}
+	{% assign absMediaLinkBasePlaceholder = '{{ absMediaLinkBase }}' %}
+	{% assign absLinkBasePlaceholder = '{{ absLinkBase }}' %}
+    {{ page.content | replace: mediaLinkBasePlaceholder, mediaLinkBase | replace: absMediaLinkBasePlaceholder, absMediaLinkBase | replace: absLinkBasePlaceholder, absLinkBase }}
 
 </main>

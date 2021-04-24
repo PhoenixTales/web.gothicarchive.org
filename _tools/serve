@@ -1,2 +1,26 @@
-#!/bin/sh
-bundle exec jekyll serve  --port 4420
+#!/usr/bin/env bash
+set -e errexit
+
+# check initial requirements
+if [[ ! -d media/.git ]]
+then
+    echo "do recursive clone with submodule /media and run from repository root" > /dev/stderr
+    exit 1
+fi
+
+# stop spawned jekyll process on script exit
+trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+
+# start jekyll in background
+JEKYLL_ENV=production bundle exec jekyll serve  --port 4420 &
+
+# keep recreating the symlink that jekyll removes on some updates
+while :
+do
+    if [[ ! -e _site/media ]]
+    then
+        ln -s ${PWD}/media _site/media
+    fi
+    sleep 5
+done
+

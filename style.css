@@ -1,3 +1,6 @@
+---
+layout: raw
+---
 /*
   GOTHIC ARCHIVE
   design by flosha
@@ -31,7 +34,7 @@ header {
 }
 
 .logo {
-  background-image: url('img/header.png');
+  background-image: url('{{ absMediaLinkBase }}/img/header.png');
   display: block;
   height: 332px;
   width: 300px;
