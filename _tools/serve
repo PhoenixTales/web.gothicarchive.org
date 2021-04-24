@@ -12,7 +12,7 @@ fi
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
 # start jekyll in background
-JEKYLL_ENV=production bundle exec jekyll serve  --port 4420 &
+JEKYLL_ENV=development bundle exec jekyll serve  --port 4420 &
 
 # keep recreating the symlink that jekyll removes on some updates
 while :
