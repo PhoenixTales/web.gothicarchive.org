@@ -22,7 +22,7 @@ jobs:
     - uses: TheDoctor0/zip-release@0.4.1
       with:
         filename: 'gothicarchive.zip'
-    - uses: mikeal/publish-to-github-action@master
+    - uses: mikeal/publish-to-github-action@1.0.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH_NAME: 'gh-pages'
+        BRANCH_NAME: ${{ steps.myref.outputs.branch }}
