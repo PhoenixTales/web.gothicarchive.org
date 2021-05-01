@@ -17,4 +17,5 @@ jobs:
     - uses: iranzo/gh-pages-jekyll-action@1.0
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        SOURCE_FOLDER: .
     - uses: TheDoctor0/zip-release@0.4.1
