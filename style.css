@@ -3,7 +3,8 @@ layout: raw
 ---
 /*
   GOTHIC ARCHIVE
-  design by flosha
+  design by flosha 
+  css by flosha & Avallach
 */
 
 
@@ -379,6 +380,10 @@ a img {
 article {
   max-width: 600px;
   margin: 5em 0 10em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6; 
+  color: #ccb9a5;
 }    
 
 article h1 {
