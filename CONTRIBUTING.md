@@ -9,13 +9,14 @@ Online web version for performance reasons uses separate server for heavy media 
 All internal URLs that appear in archive content (in particular, `<img src="`>) cannot either:
 - hardcode domain name, like `https://media.gothicarchive.org/img/foo.jpg` (because that won't work in offline archive)
 - use relative path, like `../img/foo.jpg` (because that won't work in online web version, where pages and media assets are on different servers)
+
 Instead of that, special URL macros have to be used.
 
 ### Macros for URLs of text/html/md files
 - `linkBase` - will expand to directory with current page, for example `https://gothicarchive.org/comix` or `C:\marvin\gothicarchive\comix`
 - `absLinkBase` - will expand to root of archive, for example `https://gothicarchive.org` or `C:\marvin\gothicarchive`
 
-### Macros for URLs of media files 
+### Macros for URLs of media assets 
 - `mediaLinkBase` - will expand to media directory corresponding to directory with current page, for example `https://media.gothicarchive.org/comix` or `C:\marvin\gothicarchive\comix`
 - `absMediaLinkBase` - will expand to media root of archive, for example `https://media.gothicarchive.org` or `C:\marvin\gothicarchive\comix`
 
