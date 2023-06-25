@@ -3,7 +3,7 @@
 ## Online vs offline deployment
 Gothic Archive uses HTML interface for both online web version, and local offline access from extracted zip archive.
 In offline archive, text and media files are together in single directory structure.
-Online web version for performance reasons uses separate server for heavy media assets (`media.gothicarchive.org`) and for txt/html/md files (`gothicarchive.org`). This way changes to text and code are reflected online very quikly, in less than one minute after commit is merged to `main` branch. On the other hand, the heavy media assets take significant time to deploy and invalidate CDN caches, so you may have to wait many minutes before changes are visible online.
+Online web version for performance reasons uses separate server for heavy media assets (`media.gothicarchive.org`) and for txt/html/md files (`gothicarchive.org`). This way changes to text and code are reflected online very quickly, in less than one minute after commit is merged to `main` branch. On the other hand, the heavy media assets take significant time to deploy and invalidate CDN caches, so you may have to wait many minutes before changes are visible online.
 
 ## URLs
 All internal URLs that appear in archive content (in particular, `<img src="`>) cannot either:
