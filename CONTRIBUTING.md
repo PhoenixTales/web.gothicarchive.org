@@ -35,7 +35,7 @@ and need to link the file
 ```
 media.gothicarchive.org/comix/img/gothic/gothic_logo.gif
 ```
-Correct:
+Correct (in this case, `../` have to be used to correct the URL, otherwise, it will be `web.gothicarchive.org/comix/gothic/img/gothic/gothic_logo.gif`):
 ```
 <img src="{{ mediaLinkBase }}/../img/gothic/gothic_logo.gif">
 ```
