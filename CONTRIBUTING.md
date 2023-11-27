@@ -24,7 +24,7 @@ Instead of that, special URL macros have to be used.
 
 ### Macros for URLs of media assets 
 - `mediaLinkBase` - will expand to media directory corresponding to directory with current page, for example `https://media.gothicarchive.org/comix` or `C:\marvin\gothicarchive\comix`
-- `absMediaLinkBase` - will expand to media root of archive, for example `https://media.gothicarchive.org` or `C:\marvin\gothicarchive\comix`
+- `absMediaLinkBase` - will expand to media root of archive, for example `https://media.gothicarchive.org` or `C:\marvin\gothicarchive`
 
 ### Examples
 We are editing file:
@@ -35,7 +35,7 @@ and need to link the file
 ```
 media.gothicarchive.org/comix/img/gothic/gothic_logo.gif
 ```
-Correct:
+Correct (in this case, `../` have to be used to correct the URL, otherwise, it will be `web.gothicarchive.org/comix/gothic/img/gothic/gothic_logo.gif`):
 ```
 <img src="{{ mediaLinkBase }}/../img/gothic/gothic_logo.gif">
 ```
